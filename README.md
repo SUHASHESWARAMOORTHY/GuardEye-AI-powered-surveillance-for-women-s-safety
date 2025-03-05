@@ -1,0 +1,2 @@
+# GuardEye-AI-powered-surveillance-for-women-s-safety
+The Woman Safety Analytics System is an AI-powered surveillance solution that utilizes CCTV cameras for gender detection and gesture recognition to identify distress signals. Upon detecting potential threats or violence, the system triggers SOS alerts to authorities for immediate response. It employs advanced computer vision algorithms to monitor .
