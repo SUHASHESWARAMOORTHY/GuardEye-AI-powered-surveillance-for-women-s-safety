@@ -1,37 +1,39 @@
-# GuardEye-AI-powered-surveillance-for-women-s-safety
-The Woman Safety Analytics System is an AI-powered surveillance solution that utilizes CCTV cameras for gender detection and gesture recognition to identify distress signals. Upon detecting potential threats or violence, the system triggers SOS alerts to authorities for immediate response. It employs advanced computer vision algorithms to monitor .
 
+## 📌 Overview
 
-# 🚨 Woman Safety Analytics System
+The **Woman Safety Analytics System** is an AI-powered surveillance solution designed to detect and respond to potential threats in public spaces using CCTV cameras. 
+# Traditional CCTV systems are reactive, meaning they only record footage and require manual monitoring to detect threats.
+# This system is proactive, using AI-driven real-time analysis to detect potential threats before an incident escalates, ensuring faster response and improved safety 
 
-## 📌 Overview  
-The **Woman Safety Analytics System** is an AI-powered surveillance solution utilizing **CCTV cameras** for **gender detection and gesture recognition** to identify distress signals. Upon detecting potential threats or violence, the system **triggers SOS alerts** to authorities and **notifies nearby individuals**. This system ensures **public security** through automated threat detection and rapid emergency response.  
+The system has evolved over two versions:
 
-## 🔍 Key Features  
-- **Gender Detection:** Identifies whether the subject is male or female.  
-- **Hand Gesture Recognition:** Detects the **"OK" sign** as a distress signal.  
-- **Automated Alert System:** If a distress gesture is detected:  
-  - 🚀 **Sends an SOS alert** to authorities using **MQTT**.  
-  - 🔊 **Activates a buzzer** to alert nearby people.  
-- **Violence Detection:** Recognizes violent activities in the monitored area.  
-- **Real-time Monitoring:** Uses **computer vision algorithms** for continuous analysis of CCTV footage.  
+- **Version 1.0:** Used **gesture detection** to recognize an **"OK" sign** as a distress signal.
+- **Version 2.0:** Removed gesture detection and now **analyzes human bounding boxes** to identify **suspicious activities** based on proximity and duration of interactions.
 
-## 🛠 Technologies Used  
-- **YOLO Model** for real-time object detection.  
-- **OpenCV & Deep Learning** for gesture and gender recognition.  
-- **MQTT Protocol** for instant alert communication.  
-- **Edge Processing** using ESP modules for local response.  
+## 🛠 Features
 
-## 🚀 How It Works  
-1. 📷 **Camera captures a human subject** in the monitored area.  
-2. 🏷 **Gender is identified** (Male/Female).  
-3. ✋ **Hand gesture detection** is performed to check for the **"OK" sign**.  
-4. 🔔 If an **"OK" sign** is detected:  
-   - 🚨 **Alert sent to authorities via MQTT**.  
-   - 🔊 **Buzzer activated** to notify nearby individuals.  
-5. ⚠️ **System also detects instances of violence** and triggers alerts accordingly.  
+### ✅ **Version 1.0 – Hand Gesture-Based Safety System**
 
-## 🎯 Goal  
-To enhance **women's safety** by leveraging **AI-powered surveillance**, enabling **quick response** to distress situations in **public spaces**.  
+- **Detects "OK" Hand Sign** as a distress signal.
+- **Gender Identification** to verify if the subject is male or female.
+- **Automated Alert System**:
+  - 🚨 **Sends an SOS alert** to authorities via **MQTT**.
+  - 📸 **Captures suspect images** for security analysis.
+  - 🔊 **Buzzer Activation** for nearby warnings.
+- **Uses OpenCV & Mediapipe** for gesture detection.
 
----
+### 🔄 **Version 2.0 – Suspicious Activity Detection (Bounding Box-Based)**
+
+- **No Hand Gesture Detection** – Now focuses on **human proximity & duration analysis**.
+- **Bounding Box Tracking**: Monitors humans within CCTV footage.
+- **Proximity & Time-Based Analysis**: Detects prolonged close interactions.
+- **Automated Alerts via MQTT** when potential threats are detected.
+- **Image Logging** to capture suspicious activity.
+
+## 🔧 Technologies Used
+
+- **YOLO Model** for real-time object detection.
+- **OpenCV & Deep Learning** for tracking and recognition.
+- **MQTT Protocol** for instant alert communication.
+- **ESP32 & ESP8266** for Edge Processing.
+- **Strong Edge **processing (GPU recommended).ed).
